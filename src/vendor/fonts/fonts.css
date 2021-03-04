@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 600;
+    src: url("SFProDisplay-Semibold.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 900;
+    src: url("SFProDisplay-Black.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    font-style:  normal;
+    font-weight: 400;
+    src: url("SFProDisplay-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style:  normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("Poppins-Bold.woff") format("woff");
+}
