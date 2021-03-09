@@ -16,13 +16,12 @@
     font-family: 'SF Pro Display';
     font-style:  normal;
     font-weight: 400;
-    src: url("SFProDisplay-Medium.woff") format("woff");
+    src: url("SFProDisplay-Regular.woff") format("woff");
 }
 
 @font-face {
     font-family: 'Poppins';
     font-style:  normal;
-    font-weight: 900;
-    font-display: swap;
+    font-weight: bold;
     src: url("Poppins-Bold.woff") format("woff");
 }

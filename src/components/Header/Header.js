@@ -9,11 +9,11 @@ function Header() {
             <div className='header__eclipse'/>
             <div className='header__links'>
                 <div className='header__border header__border_top'/>
-                <a className='header__link' title='инстаграм' href='https://www.instagram.com/saved_frame/'>
-                    <img src={Instagram} alt='sdf'/>
+                <a className='header__link' title='Instagram' href='https://www.instagram.com/saved_frame/'>
+                    <img src={Instagram} alt='Инстаграм'/>
                 </a>
-                <a className='header__link' title='вконтакте' href='https://vk.com/taiger13'>
-                    <img src={Vk} alt='sdf'/>
+                <a className='header__link' title='VK' href='https://vk.com/taiger13'>
+                    <img src={Vk} alt='Вконтакте'/>
                 </a>
                 <div className='header__border header__border_bottom'/>
             </div>
