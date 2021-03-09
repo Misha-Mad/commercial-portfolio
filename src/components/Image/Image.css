@@ -19,6 +19,8 @@
   height: 40px;
   background-color: transparent;
   border: none;
+  outline: none;
+  cursor: pointer;
 }
 .image__arrow {
   width: 40px;
