@@ -1,25 +1,27 @@
 {
   "files": {
-    "main.css": "/commercial-portfolio/static/css/main.2cc69620.chunk.css",
-    "main.js": "/commercial-portfolio/static/js/main.2d7b1f2f.chunk.js",
-    "main.js.map": "/commercial-portfolio/static/js/main.2d7b1f2f.chunk.js.map",
-    "runtime-main.js": "/commercial-portfolio/static/js/runtime-main.d8f1c9cf.js",
-    "runtime-main.js.map": "/commercial-portfolio/static/js/runtime-main.d8f1c9cf.js.map",
+    "main.css": "/commercial-portfolio/static/css/main.6312cef6.chunk.css",
+    "main.js": "/commercial-portfolio/static/js/main.275a2768.chunk.js",
+    "main.js.map": "/commercial-portfolio/static/js/main.275a2768.chunk.js.map",
+    "runtime-main.js": "/commercial-portfolio/static/js/runtime-main.5391c64d.js",
+    "runtime-main.js.map": "/commercial-portfolio/static/js/runtime-main.5391c64d.js.map",
     "static/js/2.3ee57f2b.chunk.js": "/commercial-portfolio/static/js/2.3ee57f2b.chunk.js",
     "static/js/2.3ee57f2b.chunk.js.map": "/commercial-portfolio/static/js/2.3ee57f2b.chunk.js.map",
-    "static/js/3.98527900.chunk.js": "/commercial-portfolio/static/js/3.98527900.chunk.js",
-    "static/js/3.98527900.chunk.js.map": "/commercial-portfolio/static/js/3.98527900.chunk.js.map",
+    "static/js/3.3ea5eb4d.chunk.js": "/commercial-portfolio/static/js/3.3ea5eb4d.chunk.js",
+    "static/js/3.3ea5eb4d.chunk.js.map": "/commercial-portfolio/static/js/3.3ea5eb4d.chunk.js.map",
     "index.html": "/commercial-portfolio/index.html",
-    "static/css/main.2cc69620.chunk.css.map": "/commercial-portfolio/static/css/main.2cc69620.chunk.css.map",
+    "static/css/main.6312cef6.chunk.css.map": "/commercial-portfolio/static/css/main.6312cef6.chunk.css.map",
     "static/js/2.3ee57f2b.chunk.js.LICENSE.txt": "/commercial-portfolio/static/js/2.3ee57f2b.chunk.js.LICENSE.txt",
     "static/media/index.css": "/commercial-portfolio/static/media/SFProDisplay-Semibold.b8097106.woff",
+    "static/media/arrow-left.53c98544.svg": "/commercial-portfolio/static/media/arrow-left.53c98544.svg",
+    "static/media/arrow-right.b6703c89.svg": "/commercial-portfolio/static/media/arrow-right.b6703c89.svg",
     "static/media/instagram.72e3152a.svg": "/commercial-portfolio/static/media/instagram.72e3152a.svg",
     "static/media/vk.38a9525e.svg": "/commercial-portfolio/static/media/vk.38a9525e.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.d8f1c9cf.js",
+    "static/js/runtime-main.5391c64d.js",
     "static/js/2.3ee57f2b.chunk.js",
-    "static/css/main.2cc69620.chunk.css",
-    "static/js/main.2d7b1f2f.chunk.js"
+    "static/css/main.6312cef6.chunk.css",
+    "static/js/main.275a2768.chunk.js"
   ]
 }
