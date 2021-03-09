@@ -1,11 +1,14 @@
 import './Image.css'
 
-
-function Header() {
+function Image() {
 
     return (
         <section className='image'>
-            <h2 className='image__title'>имиджевая съемка</h2>
+            <div>
+                <button className='image__previous'/>
+                <h2 className='image__title'>имиджевая съемка</h2>
+                <button className='image__next'/>
+            </div>
             <div className='image__content'>
                 <iframe width="480"
                         height="360"
@@ -31,4 +34,4 @@ function Header() {
     )
 }
 
-export default Header;
+export default Image;
