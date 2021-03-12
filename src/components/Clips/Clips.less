@@ -1,3 +1,29 @@
+@import url('../../Utils/constants');
+
+@keyframes verticalMove {
+  0% {
+    top: 50px;
+  }
+  50% {
+    top: 500px;
+  }
+  100% {
+    top: 50px;
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1) rotate(10deg);;
+  }
+  50% {
+    transform: scale(.5) rotate(30deg);;
+  }
+  100% {
+    transform: scale(1) rotate(10deg);;
+  }
+}
+
 .image {
   width: 100%;
   min-height: 800px;
@@ -5,6 +31,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
 }
 
 .image__head {
@@ -28,6 +55,38 @@
 .image__arrow {
   width: 40px;
   height: 40px;
+}
+
+.image__ellipse_orange{
+  @ellipse4();
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  left: -300px;
+  top: 150px;
+  border-radius: 50%;
+  z-index: 0;
+  animation-name: verticalMove;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: ease-in-out;
+}
+
+.image__ellipse_pink{
+  @ellipse5();
+  position: absolute;
+  width: 800px;
+  height: 1000px;
+  right: -500px;
+  bottom: -400px;
+  border-radius: 20%;
+  z-index: 0;
+  animation-name: scale;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear;
 }
 
 .image__title {

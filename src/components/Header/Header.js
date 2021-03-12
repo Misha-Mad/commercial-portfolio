@@ -6,7 +6,7 @@ function Header() {
 
     return (
         <header className='header'>
-            <div className='header__eclipse'/>
+            <div className='header__ellipse'/>
             <div className='header__links'>
                 <div className='header__border header__border_top'/>
                 <a className='header__link' title='Instagram' href='https://www.instagram.com/saved_frame/'>

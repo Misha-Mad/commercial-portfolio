@@ -3,6 +3,7 @@ import Header from '../Header/Header';
 import Image from '../Image/Image';
 import Promo from '../Promo/Promo';
 import Clips from '../Clips/Clips';
+import Photos from '../Photos/Photos';
 import About from '../About/About';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Image/>
       <Promo/>
       <Clips/>
+      <Photos/>
       <About/>
     </div>
   );

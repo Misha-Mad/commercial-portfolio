@@ -25,24 +25,22 @@
   box-sizing: border-box;
   width: 100%;
   min-height: 900px;
-  background: linear-gradient(189.81deg, rgba(218, 49, 171, 0.5) 6.65%, rgba(25, 29, 112, 0.5) 52.2%, rgba(0, 0, 0, 0.5) 100.08%);
+  background: linear-gradient(190deg, rgba(218, 49, 171, 0.5) 6%, rgba(25, 29, 112, 0.5) 50%, #000000 80%);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  overflow: hidden;
 }
-.header__eclipse {
+.header__ellipse {
+  background: #160E6B;
+  filter: blur(80px);
   position: absolute;
-  width: 621px;
-  height: 550px;
+  width: 400px;
+  height: 400px;
   right: -150px;
   top: 175px;
   border-radius: 50%;
-  background: rgba(46, 29, 226, 0.3);
-  filter: blur(50px);
   z-index: 0;
-  transition: rota;
   animation-duration: 5s;
   animation-name: rotate;
   animation-iteration-count: infinite;
@@ -78,6 +76,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
 }
 .header__link {
   margin: 10px;

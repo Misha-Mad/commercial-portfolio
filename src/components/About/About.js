@@ -5,6 +5,8 @@ function About() {
 
     return (
         <section className='about'>
+            <div className='about__ellipse_blue'/>
+            <div className='about__ellipse_orange'/>
             <h2 className='about__title'>О себе</h2>
             <div className='about__content'>
                 <img className='about__image' src={Portrait} alt='портрет'/>

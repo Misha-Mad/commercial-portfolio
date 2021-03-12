@@ -6,6 +6,8 @@ function Promo() {
 
     return (
         <section className='image'>
+            <div className='image__ellipse'/>
+            <div className='image__ellipse_small'/>
             <div className='image__head'>
                 <button className='image__button'>
                     <img className='image__arrow' src={ArrowLeft} alt="dfgh"/>

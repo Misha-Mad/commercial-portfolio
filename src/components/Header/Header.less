@@ -33,21 +33,18 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  overflow: hidden;
+
 }
 
-.header__eclipse {
+.header__ellipse {
+  @ellipse1();
   position: absolute;
-  width: 621px;
-  height: 550px;
+  width: 400px;
+  height: 400px;
   right: -150px;
   top: 175px;
   border-radius: 50%;
-  background: rgba(46, 29, 226, .3);
-  filter: blur(50px);
   z-index: 0;
-  transition: rota;
-
   animation-duration: 5s;
   animation-name: rotate;
   animation-iteration-count: infinite;
@@ -87,6 +84,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
 }
 
 .header__link {

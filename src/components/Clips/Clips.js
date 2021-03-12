@@ -6,6 +6,8 @@ function Clips() {
 
     return (
         <section className='image'>
+            <div className='image__ellipse_orange'/>
+            <div className='image__ellipse_pink'/>
             <div className='image__head'>
                 <button className='image__button'>
                     <img className='image__arrow' src={ArrowLeft} alt="dfgh"/>
