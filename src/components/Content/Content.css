@@ -1,0 +1,212 @@
+@keyframes move {
+  0% {
+    right: 350px;
+    top: 30px;
+  }
+  25% {
+    right: 250px;
+    top: 80px;
+  }
+  50% {
+    right: 350px;
+    top: 180px;
+  }
+  75% {
+    right: 450px;
+    top: 80px;
+  }
+  100% {
+    right: 350px;
+    top: 30px;
+  }
+}
+@keyframes smallEllipseMove {
+  0% {
+    left: -300px;
+    top: 130px;
+  }
+  25% {
+    left: -200px;
+    top: 180px;
+  }
+  50% {
+    left: -300px;
+    top: 230px;
+  }
+  75% {
+    left: -400px;
+    top: 180px;
+  }
+  100% {
+    left: -300px;
+    top: 130px;
+  }
+}
+@keyframes verticalMove {
+  0% {
+    top: 50px;
+  }
+  50% {
+    top: 500px;
+  }
+  100% {
+    top: 50px;
+  }
+}
+@keyframes scale {
+  0% {
+    transform: scale(1) rotate(10deg);
+  }
+  50% {
+    transform: scale(0.5) rotate(30deg);
+  }
+  100% {
+    transform: scale(1) rotate(10deg);
+  }
+}
+.content {
+  width: 100%;
+  min-height: 800px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.content__head {
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 120px 0 50px;
+  z-index: 1;
+}
+.content__button {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.content__arrow {
+  width: 40px;
+  height: 40px;
+}
+.content__title {
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 150%;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+}
+.content__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  z-index: 1;
+}
+.content__description {
+  max-width: 445px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 50px;
+}
+.content__subtitle {
+  font-family: SF Pro Display, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #1EA6D1;
+  margin: 0 0 10px 0;
+}
+.content__name {
+  font-family: SF Pro Display, sans-serif;
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 0 48px 0;
+}
+.content__text {
+  font-family: SF Pro Display, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #fff;
+  margin: 0 0 50px 0;
+}
+.content__ellipse {
+  background: radial-gradient(40.35% 50% at 50.75% 48.6%, rgba(205, 82, 200, 0.5) 0%, rgba(30, 37, 209, 0.5) 100%);
+  filter: blur(80px);
+  position: absolute;
+  width: 800px;
+  height: 600px;
+  right: 450px;
+  top: 130px;
+  border-radius: 50%;
+  z-index: 0;
+  animation-duration: 10s;
+  animation-name: move;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear;
+}
+.content__ellipse_small {
+  background: rgba(171, 55, 166, 0.2);
+  filter: blur(50px);
+  position: absolute;
+  width: 600px;
+  height: 400px;
+  left: -300px;
+  top: 130px;
+  border-radius: 50%;
+  z-index: 0;
+  animation-name: smallEllipseMove;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  animation-timing-function: linear;
+}
+.content__ellipse_orange {
+  background: rgba(255, 92, 0, 0.3);
+  filter: blur(100px);
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  left: -300px;
+  top: 150px;
+  border-radius: 50%;
+  z-index: 0;
+  animation-name: verticalMove;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: ease-in-out;
+}
+.content__ellipse_pink {
+  background: rgba(255, 0, 107, 0.4);
+  filter: blur(80px);
+  position: absolute;
+  width: 800px;
+  height: 1000px;
+  right: -500px;
+  bottom: -400px;
+  border-radius: 20%;
+  z-index: 0;
+  animation-name: scale;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear;
+}
+/*# sourceMappingURL=Content.css.map */

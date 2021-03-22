@@ -1,4 +1,4 @@
-
+import './Photos.css';
 import ArrowLeft from '../../images/arrow-left.svg';
 import ArrowRight from '../../images/arrow-right.svg';
 

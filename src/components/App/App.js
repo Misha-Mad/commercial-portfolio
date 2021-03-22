@@ -1,20 +1,56 @@
 import './App.css';
+import {useState} from 'react';
 import Header from '../Header/Header';
-import Image from '../Image/Image';
-import Promo from '../Promo/Promo';
-import Clips from '../Clips/Clips';
 import Photos from '../Photos/Photos';
 import About from '../About/About';
+import Content from '../Content/Content';
+import {IMG_DATA, PROMO_DATA, CLIPS_DATA} from '../../Utils/data';
+
+
 
 function App() {
 
+    const [currentImgData, setCurrentImgData] = useState(IMG_DATA[0]);
+    const [currentPromoData, setCurrentPromoData] = useState(PROMO_DATA[0]);
+    const [currentClipsData, setCurrentClipsData] = useState(CLIPS_DATA[0]);
+
+    function handlerLeftArrowImage() {
+
+    }
+
+    function handlerRightArrowImage() {
+
+    }
+
+
+    function handlerLeftArrowImage() {
+
+    }
+
+    function handlerRightArrowImage() {
+
+    }
 
   return (
     <div className="app">
       <Header/>
-      <Image/>
-      <Promo/>
-      <Clips/>
+      <Content
+          title='имиджевая съёмка'
+          currentData={currentImgData}
+          arrowButtons={true}
+      />
+      <Content
+          title='промо съёмка'
+          currentData={currentPromoData}
+          ellipses='promo'
+          arrowButtons={false}
+      />
+      <Content
+          title='клипы'
+          currentData={currentClipsData}
+          ellipses='clips'
+          arrowButtons={true}
+      />
       <Photos/>
       <About/>
     </div>
