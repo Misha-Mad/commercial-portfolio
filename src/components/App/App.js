@@ -16,25 +16,32 @@ function App() {
     function handlerLeftArrowImage() {
         if(currentImgDataIndex !== 0) {
             setCurrentImgDataIndex(currentImgDataIndex - 1);
+        } else {
+            setCurrentImgDataIndex(IMG_DATA.length - 1);
         }
     }
 
     function handlerRightArrowImage() {
         if(currentImgDataIndex !== IMG_DATA.length - 1) {
             setCurrentImgDataIndex(currentImgDataIndex + 1);
+        } else {
+            setCurrentImgDataIndex(0);
         }
     }
-
 
     function handlerLeftArrowClips() {
         if(currentClipsDataIndex !== 0) {
             setCurrentClipsDataIndex(currentClipsDataIndex - 1);
+        } else {
+            setCurrentClipsDataIndex(CLIPS_DATA.length - 1);
         }
     }
 
     function handlerRightArrowClips() {
         if(currentClipsDataIndex !== CLIPS_DATA.length - 1) {
             setCurrentClipsDataIndex(currentClipsDataIndex + 1);
+        } else {
+            setCurrentClipsDataIndex(0);
         }
     }
 

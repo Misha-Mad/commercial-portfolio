@@ -10,10 +10,10 @@ function Header() {
             <div className='header__links'>
                 <div className='header__border header__border_top'/>
                 <a target='_blank' className='header__link' title='Instagram' href='https://www.instagram.com/saved_frame/'>
-                    <img src={Instagram} alt='Инстаграм'/>
+                    <img className='header__linkImg' src={Instagram} alt='Инстаграм'/>
                 </a>
                 <a  target='_blank' className='header__link' title='VK' href='https://vk.com/taiger13'>
-                    <img src={Vk} alt='Вконтакте'/>
+                    <img className='header__linkImg' src={Vk} alt='Вконтакте'/>
                 </a>
                 <div className='header__border header__border_bottom'/>
             </div>

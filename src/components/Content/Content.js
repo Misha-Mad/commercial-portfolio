@@ -1,8 +1,6 @@
 import './Content.css';
 import ArrowLeft from '../../images/arrow-left.svg';
-import ArrowLeftDisabled from '../../images/arrow-left-disabled.svg';
 import ArrowRight from '../../images/arrow-right.svg';
-import ArrowRightDisabled from '../../images/arrow-right-disabled.svg';
 
 function Content({title, data, currentDataIndex, ellipses, arrowButtons, onLeftArrowButtonHandler, onRightArrowButtonHandler}) {
 
@@ -29,11 +27,11 @@ function Content({title, data, currentDataIndex, ellipses, arrowButtons, onLeftA
                     : <></>}
             <div className='content__head'>
                 {arrowButtons && <button onClick={leftHandlerButton} className='content__button'>
-                    <img className='content__arrow' src={currentDataIndex === 0 ? ArrowLeftDisabled : ArrowLeft} alt="arrow"/>
+                    <img className='content__arrow' src={ArrowLeft} alt="arrow"/>
                 </button>}
                 <h2 className='content__title'>{title}</h2>
                 {arrowButtons && <button onClick={rightHandlerButton} className='content__button'>
-                    <img className='content-arrow' src={currentDataIndex === data.length - 1 ? ArrowRightDisabled : ArrowRight} alt="arrow"/>
+                    <img className='content-arrow' src={ArrowRight} alt="arrow"/>
                 </button>}
             </div>
             <div className='content__content'>
