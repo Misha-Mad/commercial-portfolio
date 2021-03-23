@@ -7,6 +7,7 @@ import Content from '../Content/Content';
 import {IMG_DATA, PROMO_DATA, CLIPS_DATA} from '../../Utils/data';
 
 
+
 function App() {
 
     const [currentImgDataIndex, setCurrentImgDataIndex] = useState(0);

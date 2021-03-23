@@ -2,7 +2,18 @@ import './Content.css';
 import ArrowLeft from '../../images/arrow-left.svg';
 import ArrowRight from '../../images/arrow-right.svg';
 
-function Content({title, data, currentDataIndex, ellipses, arrowButtons, onLeftArrowButtonHandler, onRightArrowButtonHandler}) {
+function Content({
+                     title,
+                     data,
+                     currentDataIndex,
+                     ellipses,
+                     arrowButtons,
+                     onLeftArrowButtonHandler,
+                     onRightArrowButtonHandler
+                 }) {
+
+    const intFrameWidth = window.innerWidth;
+    console.log(intFrameWidth)
 
     function leftHandlerButton() {
         onLeftArrowButtonHandler();
@@ -15,10 +26,10 @@ function Content({title, data, currentDataIndex, ellipses, arrowButtons, onLeftA
     return (
         <section className='content'>
             {ellipses === 'promo' ?
-            <>
-                <div className='content__ellipse'/>
-                <div className='content__ellipse_small'/>
-            </>
+                <>
+                    <div className='content__ellipse'/>
+                    <div className='content__ellipse_small'/>
+                </>
                 : ellipses === 'clips' ?
                     <>
                         <div className='content__ellipse_orange'/>
@@ -26,7 +37,7 @@ function Content({title, data, currentDataIndex, ellipses, arrowButtons, onLeftA
                     </>
                     : <></>}
             <div className='content__head'>
-                {arrowButtons && <button onClick={leftHandlerButton} className='content__button'>
+                {arrowButtons && <button onClick={leftHandlerButton} className='content__button content__button_hidden'>
                     <img className='content__arrow' src={ArrowLeft} alt="arrow"/>
                 </button>}
                 <h2 className='content__title'>{title}</h2>
@@ -35,7 +46,8 @@ function Content({title, data, currentDataIndex, ellipses, arrowButtons, onLeftA
                 </button>}
             </div>
             <div className='content__content'>
-                <iframe width="560"
+                <iframe className='content__video'
+                        width="560"
                         height="315"
                         src={data[currentDataIndex].videoSrc}
                         frameBorder="0"
