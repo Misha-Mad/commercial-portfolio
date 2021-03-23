@@ -7,28 +7,35 @@ import Content from '../Content/Content';
 import {IMG_DATA, PROMO_DATA, CLIPS_DATA} from '../../Utils/data';
 
 
-
 function App() {
 
-    const [currentImgData, setCurrentImgData] = useState(IMG_DATA[0]);
-    const [currentPromoData, setCurrentPromoData] = useState(PROMO_DATA[0]);
-    const [currentClipsData, setCurrentClipsData] = useState(CLIPS_DATA[0]);
+    const [currentImgDataIndex, setCurrentImgDataIndex] = useState(0);
+    const [currentPromoDataIndex, setCurrentPromoDataIndex] = useState(0);
+    const [currentClipsDataIndex, setCurrentClipsDataIndex] = useState(0);
 
     function handlerLeftArrowImage() {
-
+        if(currentImgDataIndex !== 0) {
+            setCurrentImgDataIndex(currentImgDataIndex - 1);
+        }
     }
 
     function handlerRightArrowImage() {
-
+        if(currentImgDataIndex !== IMG_DATA.length - 1) {
+            setCurrentImgDataIndex(currentImgDataIndex + 1);
+        }
     }
 
 
-    function handlerLeftArrowImage() {
-
+    function handlerLeftArrowClips() {
+        if(currentClipsDataIndex !== 0) {
+            setCurrentClipsDataIndex(currentClipsDataIndex - 1);
+        }
     }
 
-    function handlerRightArrowImage() {
-
+    function handlerRightArrowClips() {
+        if(currentClipsDataIndex !== CLIPS_DATA.length - 1) {
+            setCurrentClipsDataIndex(currentClipsDataIndex + 1);
+        }
     }
 
   return (
@@ -36,20 +43,27 @@ function App() {
       <Header/>
       <Content
           title='имиджевая съёмка'
-          currentData={currentImgData}
+          data={IMG_DATA}
+          currentDataIndex={currentImgDataIndex}
           arrowButtons={true}
+          onLeftArrowButtonHandler={handlerLeftArrowImage}
+          onRightArrowButtonHandler={handlerRightArrowImage}
       />
       <Content
           title='промо съёмка'
-          currentData={currentPromoData}
+          data={PROMO_DATA}
+          currentDataIndex={currentPromoDataIndex}
           ellipses='promo'
           arrowButtons={false}
       />
       <Content
           title='клипы'
-          currentData={currentClipsData}
+          data={CLIPS_DATA}
+          currentDataIndex={currentClipsDataIndex}
           ellipses='clips'
           arrowButtons={true}
+          onLeftArrowButtonHandler={handlerLeftArrowClips}
+          onRightArrowButtonHandler={handlerRightArrowClips}
       />
       <Photos/>
       <About/>
