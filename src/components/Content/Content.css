@@ -91,6 +91,7 @@
   outline: none;
   cursor: pointer;
   padding: 0;
+  margin: 0 5%;
 }
 .content__title {
   font-family: Poppins, sans-serif;
