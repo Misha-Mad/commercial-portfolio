@@ -7,7 +7,6 @@ function Content({
                      data,
                      currentDataIndex,
                      ellipses,
-                     arrowButtons,
                      onLeftArrowButtonHandler,
                      onRightArrowButtonHandler
                  }) {
@@ -37,13 +36,13 @@ function Content({
                     </>
                     : <></>}
             <div className='content__head'>
-                {arrowButtons && <button onClick={leftHandlerButton} className='content__button content__button_hidden'>
+                <button onClick={leftHandlerButton} className='content__button content__button_hidden'>
                     <LeftArrow/>
-                </button>}
+                </button>
                 <h2 className='content__title'>{title}</h2>
-                {arrowButtons && <button onClick={rightHandlerButton} className='content__button'>
+                <button onClick={rightHandlerButton} className='content__button'>
                     <RightArrow/>
-                </button>}
+                </button>
             </div>
             <div className='content__content'>
                 <iframe className='content__video'

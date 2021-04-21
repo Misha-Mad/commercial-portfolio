@@ -4,7 +4,7 @@ import Header from '../Header/Header';
 import Photos from '../Photos/Photos';
 import About from '../About/About';
 import Content from '../Content/Content';
-import { IMG_DATA, PROMO_DATA, CLIPS_DATA, PHOTOS_DATA } from '../../Utils/data';
+import {IMG_DATA, PROMO_DATA, CLIPS_DATA, PHOTOS_DATA} from '../../Utils/data';
 
 function App() {
 
@@ -14,7 +14,7 @@ function App() {
     const [currentPhotosDataIndex, setCurrentPhotosDataIndex] = useState(0);
 
     function handlerLeftArrowPhotos() {
-        if(currentPhotosDataIndex !== 0) {
+        if (currentPhotosDataIndex !== 0) {
             setCurrentPhotosDataIndex(currentPhotosDataIndex - 1);
         } else {
             setCurrentPhotosDataIndex(PHOTOS_DATA.length - 1);
@@ -22,7 +22,7 @@ function App() {
     }
 
     function handlerRightArrowPhotos() {
-        if(currentPhotosDataIndex !== PHOTOS_DATA.length - 1) {
+        if (currentPhotosDataIndex !== PHOTOS_DATA.length - 1) {
             setCurrentPhotosDataIndex(currentPhotosDataIndex + 1);
         } else {
             setCurrentPhotosDataIndex(0);
@@ -30,7 +30,7 @@ function App() {
     }
 
     function handlerLeftArrowImage() {
-        if(currentImgDataIndex !== 0) {
+        if (currentImgDataIndex !== 0) {
             setCurrentImgDataIndex(currentImgDataIndex - 1);
         } else {
             setCurrentImgDataIndex(IMG_DATA.length - 1);
@@ -38,7 +38,7 @@ function App() {
     }
 
     function handlerRightArrowImage() {
-        if(currentImgDataIndex !== IMG_DATA.length - 1) {
+        if (currentImgDataIndex !== IMG_DATA.length - 1) {
             setCurrentImgDataIndex(currentImgDataIndex + 1);
         } else {
             setCurrentImgDataIndex(0);
@@ -46,7 +46,7 @@ function App() {
     }
 
     function handlerLeftArrowClips() {
-        if(currentClipsDataIndex !== 0) {
+        if (currentClipsDataIndex !== 0) {
             setCurrentClipsDataIndex(currentClipsDataIndex - 1);
         } else {
             setCurrentClipsDataIndex(CLIPS_DATA.length - 1);
@@ -54,49 +54,65 @@ function App() {
     }
 
     function handlerRightArrowClips() {
-        if(currentClipsDataIndex !== CLIPS_DATA.length - 1) {
+        if (currentClipsDataIndex !== CLIPS_DATA.length - 1) {
             setCurrentClipsDataIndex(currentClipsDataIndex + 1);
         } else {
             setCurrentClipsDataIndex(0);
         }
     }
 
-  return (
-    <div className="app">
-      <Header/>
-      <Content
-          title='имиджевая съёмка'
-          data={IMG_DATA}
-          currentDataIndex={currentImgDataIndex}
-          arrowButtons={true}
-          onLeftArrowButtonHandler={handlerLeftArrowImage}
-          onRightArrowButtonHandler={handlerRightArrowImage}
-      />
-      <Content
-          title='промо съёмка'
-          data={PROMO_DATA}
-          currentDataIndex={currentPromoDataIndex}
-          ellipses='promo'
-          arrowButtons={false}
-      />
-      <Content
-          title='клипы'
-          data={CLIPS_DATA}
-          currentDataIndex={currentClipsDataIndex}
-          ellipses='clips'
-          arrowButtons={true}
-          onLeftArrowButtonHandler={handlerLeftArrowClips}
-          onRightArrowButtonHandler={handlerRightArrowClips}
-      />
-      <Photos
-          data={PHOTOS_DATA}
-          currentDataIndex={currentPhotosDataIndex}
-          onLeftArrowButtonHandler={handlerLeftArrowPhotos}
-          onRightArrowButtonHandler={handlerRightArrowPhotos}
-      />
-      <About/>
-    </div>
-  );
+    function handlerLeftArrowPromo() {
+        if (currentPromoDataIndex !== 0) {
+            setCurrentPromoDataIndex(currentPromoDataIndex - 1);
+        } else {
+            setCurrentPromoDataIndex(PROMO_DATA.length - 1);
+        }
+    }
+
+    function handlerRightArrowPromo() {
+        if (currentPromoDataIndex !== PROMO_DATA.length - 1) {
+            setCurrentPromoDataIndex(currentPromoDataIndex + 1);
+        } else {
+            setCurrentPromoDataIndex(0);
+        }
+    }
+
+    return (
+        <div className="app">
+            <Header/>
+            <Content
+                title='промо съёмка'
+                data={PROMO_DATA}
+                currentDataIndex={currentPromoDataIndex}
+                ellipses='promo'
+                arrowButtons={false}
+                onLeftArrowButtonHandler={handlerLeftArrowPromo}
+                onRightArrowButtonHandler={handlerRightArrowPromo}
+            />
+            <Content
+                title='имиджевая съёмка'
+                data={IMG_DATA}
+                currentDataIndex={currentImgDataIndex}
+                onLeftArrowButtonHandler={handlerLeftArrowImage}
+                onRightArrowButtonHandler={handlerRightArrowImage}
+            />
+            <Content
+                title='клипы'
+                data={CLIPS_DATA}
+                currentDataIndex={currentClipsDataIndex}
+                ellipses='clips'
+                onLeftArrowButtonHandler={handlerLeftArrowClips}
+                onRightArrowButtonHandler={handlerRightArrowClips}
+            />
+            <Photos
+                data={PHOTOS_DATA}
+                currentDataIndex={currentPhotosDataIndex}
+                onLeftArrowButtonHandler={handlerLeftArrowPhotos}
+                onRightArrowButtonHandler={handlerRightArrowPhotos}
+            />
+            <About/>
+        </div>
+    );
 }
 
 export default App;
