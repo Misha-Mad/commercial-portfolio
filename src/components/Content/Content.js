@@ -1,6 +1,6 @@
 import './Content.css';
-import ArrowLeft from '../../images/arrow-left.svg';
-import ArrowRight from '../../images/arrow-right.svg';
+import LeftArrow from '../Icons/LeftArrow';
+import RightArrow from '../Icons/RightArrow';
 
 function Content({
                      title,
@@ -38,11 +38,11 @@ function Content({
                     : <></>}
             <div className='content__head'>
                 {arrowButtons && <button onClick={leftHandlerButton} className='content__button content__button_hidden'>
-                    <img className='content__arrow' src={ArrowLeft} alt="arrow"/>
+                    <LeftArrow/>
                 </button>}
                 <h2 className='content__title'>{title}</h2>
                 {arrowButtons && <button onClick={rightHandlerButton} className='content__button'>
-                    <img className='content-arrow' src={ArrowRight} alt="arrow"/>
+                    <RightArrow/>
                 </button>}
             </div>
             <div className='content__content'>

@@ -1,6 +1,6 @@
-import './Header.css'
-import Instagram from '../../images/instagram.svg';
-import Vk from '../../images/vk.svg';
+import './Header.css';
+import VkIcon from '../Icons/VK';
+import Instagram from '../Icons/Instagram';
 
 function Header() {
 
@@ -9,11 +9,12 @@ function Header() {
             <div className='header__ellipse'/>
             <div className='header__links'>
                 <div className='header__border header__border_top'/>
-                <a target='_blank' className='header__link' title='Instagram' href='https://www.instagram.com/saved_frame/'>
-                    <img className='header__linkImg' src={Instagram} alt='Инстаграм'/>
+                <a target='_blank' className='header__link' title='Instagram'
+                   href='https://www.instagram.com/saved_frame/'>
+                    <Instagram/>
                 </a>
-                <a  target='_blank' className='header__link' title='VK' href='https://vk.com/taiger13'>
-                    <img className='header__linkImg' src={Vk} alt='Вконтакте'/>
+                <a target='_blank' className='header__link' title='VK' href='https://vk.com/taiger13'>
+                    <VkIcon/>
                 </a>
                 <div className='header__border header__border_bottom'/>
             </div>

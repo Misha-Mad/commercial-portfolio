@@ -1,19 +1,35 @@
 import './Photos.css';
-import ArrowLeft from '../../images/arrow-left.svg';
-import ArrowRight from '../../images/arrow-right.svg';
+import LeftArrow from '../Icons/LeftArrow';
+import RightArrow from '../Icons/RightArrow';
 
-function Photos() {
+function Photos({ data, currentDataIndex, onLeftArrowButtonHandler, onRightArrowButtonHandler}) {
+
+    function leftHandlerButton() {
+        onLeftArrowButtonHandler();
+    }
+
+    function rightHandlerButton() {
+        onRightArrowButtonHandler();
+    }
 
     return (
         <section className='image'>
-            <div className='image__head'>
-                <button className='image__button'>
-                    <img className='image__arrow' src={ArrowLeft} alt="dfgh"/>
+            <div className='content__head'>
+                <button onClick={leftHandlerButton} className='content__button content__button_hidden'>
+                    <LeftArrow/>
                 </button>
-                <h2 className='image__title'>фотосъёмки</h2>
-                <button className='image__button'>
-                    <img className='image-arrow' src={ArrowRight} alt="sfg"/>
+                <h2 className='content__title'>фотосъёмки</h2>
+                <button onClick={rightHandlerButton} className='content__button'>
+                    <RightArrow/>
                 </button>
+            </div>
+            <div className="image__grid">
+                <img className="image__grid-item" src={data[currentDataIndex].firstImg} alt=""/>
+                <img className="image__grid-item" src={data[currentDataIndex].secondImg} alt=""/>
+                <img className="image__grid-item" src={data[currentDataIndex].thirdImg} alt=""/>
+                <img className="image__grid-item" src={data[currentDataIndex].fourthImg} alt=""/>
+                <img className="image__grid-item" src={data[currentDataIndex].fifthImg} alt=""/>
+                <img className="image__grid-item" src={data[currentDataIndex].sixthImg} alt=""/>
             </div>
         </section>
     )

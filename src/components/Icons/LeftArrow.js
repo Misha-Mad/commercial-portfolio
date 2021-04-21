@@ -1,0 +1,17 @@
+function LeftArrow() {
+    return (
+        <svg className="arrows" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0)">
+                <path d="M0.244142 20.5892L12.7441 33.0892C13.0697 33.4148 13.597 33.4148 13.9225 33.0892C14.248 32.7637 14.248 32.2363 13.9225 31.9109L2.845 20.8334L39.1666 20.8334C39.6273 20.8334 40 20.4606 40 20C40 19.5394 39.6273 19.1666 39.1666 19.1666L2.845 19.1666L13.9225 8.08921C14.248 7.76367 14.248 7.23633 13.9225 6.91086C13.7598 6.74812 13.5465 6.66672 13.3333 6.66672C13.1201 6.66672 12.9069 6.74812 12.7441 6.91086L0.244062 19.4109C-0.0814045 19.7363 -0.0814045 20.2637 0.244142 20.5892Z"
+                      fill="white" fill-opacity="0.5"/>
+            </g>
+            <defs>
+                <clipPath id="clip0">
+                    <rect width="40" height="40" fill="white" transform="translate(40 40) rotate(-180)"/>
+                </clipPath>
+            </defs>
+        </svg>
+    );
+}
+
+export default LeftArrow;

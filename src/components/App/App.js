@@ -4,15 +4,30 @@ import Header from '../Header/Header';
 import Photos from '../Photos/Photos';
 import About from '../About/About';
 import Content from '../Content/Content';
-import {IMG_DATA, PROMO_DATA, CLIPS_DATA} from '../../Utils/data';
-
-
+import { IMG_DATA, PROMO_DATA, CLIPS_DATA, PHOTOS_DATA } from '../../Utils/data';
 
 function App() {
 
     const [currentImgDataIndex, setCurrentImgDataIndex] = useState(0);
     const [currentPromoDataIndex, setCurrentPromoDataIndex] = useState(0);
     const [currentClipsDataIndex, setCurrentClipsDataIndex] = useState(0);
+    const [currentPhotosDataIndex, setCurrentPhotosDataIndex] = useState(0);
+
+    function handlerLeftArrowPhotos() {
+        if(currentPhotosDataIndex !== 0) {
+            setCurrentPhotosDataIndex(currentPhotosDataIndex - 1);
+        } else {
+            setCurrentPhotosDataIndex(PHOTOS_DATA.length - 1);
+        }
+    }
+
+    function handlerRightArrowPhotos() {
+        if(currentPhotosDataIndex !== PHOTOS_DATA.length - 1) {
+            setCurrentPhotosDataIndex(currentPhotosDataIndex + 1);
+        } else {
+            setCurrentPhotosDataIndex(0);
+        }
+    }
 
     function handlerLeftArrowImage() {
         if(currentImgDataIndex !== 0) {
@@ -73,7 +88,12 @@ function App() {
           onLeftArrowButtonHandler={handlerLeftArrowClips}
           onRightArrowButtonHandler={handlerRightArrowClips}
       />
-      <Photos/>
+      <Photos
+          data={PHOTOS_DATA}
+          currentDataIndex={currentPhotosDataIndex}
+          onLeftArrowButtonHandler={handlerLeftArrowPhotos}
+          onRightArrowButtonHandler={handlerRightArrowPhotos}
+      />
       <About/>
     </div>
   );

@@ -142,13 +142,14 @@
   }
   .about__description {
     margin-left: 20px;
+    align-self: center;
   }
   .about__image {
     max-width: 90%;
   }
   .about__content:before {
     top: 60%;
-    left: 0;
+    left: 20%;
   }
   .about__content:after {
     left: -350px;

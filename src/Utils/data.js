@@ -1,3 +1,35 @@
+import fitnessImgOne from '../images/fitnes/fitnes1.jpg';
+import fitnessImgTwo from '../images/fitnes/fitnes2.jpg';
+import fitnessImgThree from '../images/fitnes/fitnes3.jpg';
+import fitnessImgFour from '../images/fitnes/fitnes4.jpg';
+import fitnessImgFive from '../images/fitnes/fitnes5.jpg';
+import fitnessImgSix from '../images/fitnes/fitnes6.jpg';
+import saloonImgOne from '../images/saloon/1.jpg';
+import saloonImgTwo from '../images/saloon/2.jpg';
+import saloonImgThree from '../images/saloon/3.jpg';
+import saloonImgFour from '../images/saloon/4.jpg';
+import saloonImgFive from '../images/saloon/5.jpg';
+import saloonImgSix from '../images/saloon/6.jpg';
+
+export const PHOTOS_DATA = [
+    {
+        firstImg: fitnessImgOne,
+        secondImg: fitnessImgTwo,
+        thirdImg: fitnessImgThree,
+        fourthImg: fitnessImgFour,
+        fifthImg: fitnessImgFive,
+        sixthImg: fitnessImgSix
+    },
+    {
+        firstImg: saloonImgOne,
+        secondImg: saloonImgTwo,
+        thirdImg: saloonImgThree,
+        fourthImg: saloonImgFour,
+        fifthImg: saloonImgFive,
+        sixthImg: saloonImgSix
+    }
+]
+
 export const IMG_DATA = [
     {
         name: 'Салон красоты',
@@ -36,3 +68,4 @@ export const CLIPS_DATA = [
         result: 'Клип был загружен на ютуб канал группы. После выхода клипа популярность стремительно возросла. Ребята предложили дальнейшее сотрудничество.'
     }
 ]
+
